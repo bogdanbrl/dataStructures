@@ -1,0 +1,245 @@
+
+			unstable algorithm = daca sunt doua elemente egale, programul le va interschimba intre ele
+			stable algortithm = daca sunt doua elemente egale, programul va sari peste ele 
+
+1. Selection_sort 
+
+	// this is an unstable algorithm
+	// time complexity O(n^2)
+	
+	
+2. Buble_sort 
+	
+	// this is an stable algorithm
+	// time complexity O(n^2)
+	
+3. Insertion_sort 
+
+	// this is an stable algorithm
+	// time complexity O(n^2)
+	
+4. Shell_sort
+
+	// unstable algoritm
+	// time complexity: Worst case: O(n^2)
+	
+5. recursion
+	
+	//
+	//
+	
+6. Merge_sort
+
+	// O(nlogn) - base 2. We're repeatedly dividing the array in half during the splitting phase
+	// stable algorithm
+	
+7. Quick_sort
+	
+	// O(nlogn) - base 2.
+	// unstable algorithm
+	
+8. Counting Sort
+
+	// O(n) - can achieve this because we're making assumptions about the data we're soting
+	// if we want the sort to be stable, we have to do some extra steps
+	// use when the range of values isn't to large
+	
+9. Radix_sort
+
+	//	O(n) - can achive this because we're making assumptions about the data we're sorting
+	//	even so, it often runs slower than O(nlogn) algorithms because of the overhead involved
+	//	in-place depends on which sort algorithm tou use 
+	//	stable algorithm
+	
+10. Sorting_Arrays_Using_the_JDK
+
+	//
+	//
+	
+11. challenges
+
+12. Lists (ArrayList)
+
+	//
+	//not synchronized
+	
+13. Vectors
+
+	//
+	//it is an synchronized arraylist
+	
+14. Threads
+
+	//
+	//
+	
+15. Singly linked list		---   	extends AbstractSequentialList<E>
+
+	// time complexity - it could be O(1) if you add and remove from the head of the list
+	// it works like trees, it consists from nodes (head and reference to the next head)
+	// singly list - it has one link between every node
+	// not synchronized
+	// it is create with nodes, like trees
+	
+16. Doubly linked list		---		
+
+	// similar to singly linkd list with the amendment that the node retains reference about boths neighbours
+	// time complexity - it could be O(1) if you add and remove from the head or the tail of the list 
+	// time complexity - O(n) worst case if yoy wanna insert an element between node nodes (first of all you need to locate them, that's why in O(n))
+	
+17. linked List From JDK
+	
+	// Doubly-linked list implementation of the List and Deque interfaces. Implements all optional list operations, and permits all elements (including null).
+	// Note that this implementation is not synchronized.
+	
+18. linked list challenge
+
+	//
+	//
+	
+19. Stacks
+
+	// is an abstract data type
+	// last in, first out
+	// ideal backing data structure: linked list
+	// time cpplexity: 
+			// * O(1) for push, pop, peek, when using a linked list
+			// * if you use an array, then push is O(n), because the array may have to be resized
+			// * if you know the maximumnumber of items that will ever be on the stack, an rray can be a good choice
+			// * if memory is tight, an array might be a good choice
+			// * linked list is ideal
+	// It extends class Vector with five operations that allow a vector to be treated as a stack.	
+	// A more complete and consistent set of LIFO stack operations is provided by the Deque interface and its implementations, 
+			// which should be used in preference to this class. For example:
+   					// Deque<Integer> stack = new ArrayDeque<Integer>();	
+		
+20. Queues
+
+	// is an abstract data type
+	// first in, first out
+	// add an item to the end of the queue (enqueue)
+	// remove the item at the front of the queue (dequeue)
+	
+21. Hashtables
+
+	// is an abstract data type - doesn't dictate how you store the data
+	// provide access to data using keys
+	// key doesn't have to e an integer
+	// consists of key/value pairs - data types don't have to match
+	// optimized for retrieval (when you know the key)
+	// associative array is one type of hash table
+	// also known as DICTIONARIES, MAPS
+	// in Java, hash function is Object.hashCode()
+	// collision occurs when more than one value has the same hashed value
+	// Load Factor
+			// tell us how full a hash table is
+			// load factor = # of items / capacity = size / capacity
+			// load factor is used to decide when to resize the array backing the hash table
+			// don't want load factor  too high (will increase the likehood of collisios)
+			// can play a role in determining the time complexity for retrieval
+	// add to a hash table backed by an array
+			// provide a key / value pair
+			// use a hash function to hash the key to an int value
+			// store the value at the hashed key value - this is the index into the array
+	
+22. Linear Probing
+
+	// atunci cand vrem sa adaugam o valoarea, iar hashKey acelei valori a fost deja folosit si este ocupat
+	// ca sa nu mai dea "locatia a fost deja folosita", vom cauta o alta valoare libera unde va fi adaugata
+	// crestera indexului = linear probing, daca vrem sa crestem indexul de trei ori, atunci vom folosi "three probes"
+	// 
+	
+23. Chaining
+
+	// map vs hashtable - map is unsyncronized, hashtable is synchronized
+	// 
+	
+24. Bucket Sort
+	
+	// uses hashing
+	// make assumptions abot the data, like radix and counting sort
+	// because it makes assumptions, can sort in O(n) time
+	// performs best when hashed values of items being sorted are evenly distributed, so there aren't many collu=isions
+	// how it works: 
+			// * distribute the items into buckets based on their hashed values (scattering phase)
+			// * sort the items in each bucket
+			// * merge the buckets - can just concatenate them (gathering phase)
+			// a generalization of counting sort
+	// not in-place algorithm. It use extra memory
+	// stability will depend on sort algorithm used to sort the buckets - ideally, you want a stable sort
+	// to achive O(n), must have only one item per bucket
+	// insertion sort is often used to sort the buckets, because it is fast when the number of items is small
+	
+25. Linear search algorithm
+
+	// 
+	// 
+
+26. Binary search algorithm
+
+	// data must be sorted
+	// chooses the element in the middle of the array and compares it against the search value
+	// if element is equal to the value, we're done
+	// if element is greater than the value, search the left half of the array
+	// if the element is less than value, search the right half of the array
+	
+27. Trees
+
+	// it is a hierarchical data structure
+	// every item in the tree is a node
+	// the node at the top of the tree is the root
+	// every non-root node has one and only one parent
+	// a leaf node has no children
+	// a singleton tree has only one node - the root
+	
+28. Binary Search Trees
+
+	// every node has 0, 1 or 2 children
+	// children are referred to as left child and right child
+	// in practice, we use binary search trees
+	// BST: 
+		* can perform insertions, deletions and retrievals in O(logn) time
+		* the left child always has a smaller value than its parent
+		* the right child always has a larger value than its parent
+		* this means everything to the left of the root is less than the value of the root, and everything to the right of the root is greater than the value of the root
+		* because of that, we can do a binary search
+
+29. Traversal trees 
+
+	// level - visit nodes on each level
+	// pre-order - visit the roof of every  subtree first
+	// post-order - visit the roof of every subtree last
+	// in-order - visit left chil, then root, then right child
+	
+30. Trees and JDK
+
+	// 	
+	// 
+	
+31. Heaps
+
+	// (is a special type of a inary tree)
+	// a complete binary tree that satisfies the heap property:
+		** max heap: every parent is greater than or equal to its children
+		** or min heap: every parent is less than or equal to its children
+	// children are added at each level from left to right
+	// usually implemented as arrays
+	// the maximum or minimum value will always be at the root of the tree - the advantage of using a heap
+	// heapify: process of converting a bianry tree into a heap - this often has to be done after an insertion or deletio
+	// no required ordering between siblings
+	
+32. Heaps as Arrays
+
+	// we can store binary heaps as arrays
+	// we put the root at array[0]
+	// we then traverse each level from left to right, and so the left child of the root would go into array[1], its right child would to into array[2], etc.
+	 
+	 *** insert into a heap ***
+	// always add new items to the end of the array
+	// then we have to fix the heap (heapify)
+	// we compare the new item against its parent
+	// if the item is greater than its parent, we swap it with its parent
+	// we then rinse and repeat
+	
+	
+	
